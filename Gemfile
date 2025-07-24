@@ -4,7 +4,7 @@ ruby '3.3.3'
 
 ##-- base gems for rails --##
 gem 'rack-cors', '2.0.0', require: 'rack/cors'
-gem 'rails', '~> 7.0.8.4'
+gem 'rails', '~> 7.1.0.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
@@ -61,24 +61,24 @@ gem 'redis-namespace'
 gem 'activerecord-import'
 
 ##--- gems for server & infra configuration ---##
-gem 'dotenv-rails', '>= 3.0.0'
+gem 'dotenv-rails', '>= 3.1.3'
 gem 'foreman'
 gem 'puma'
-gem 'vite_rails'
+gem 'vite_rails', '>= 3.0.18'
 # metrics on heroku
 gem 'barnes'
 
 ##--- gems for authentication & authorization ---##
 gem 'devise', '>= 4.9.4'
 gem 'devise-secure_password', git: 'https://github.com/chatwoot/devise-secure_password', branch: 'chatwoot'
-gem 'devise_token_auth', '>= 1.2.3'
+gem 'devise_token_auth', '>= 1.2.4'
 # authorization
 gem 'jwt'
 gem 'pundit'
 # super admin
 gem 'administrate', '>= 0.20.1'
-gem 'administrate-field-active_storage', '>= 1.0.3'
-gem 'administrate-field-belongs_to_search', '>= 0.9.0'
+gem 'administrate-field-active_storage', '>= 1.0.4'
+gem 'administrate-field-belongs_to_search', '>= 0.10.0'
 
 ##--- gems for pubsub service ---##
 # https://karolgalanciak.com/blog/2019/11/30/from-activerecord-callbacks-to-publish-slash-subscribe-pattern-and-event-driven-design/
@@ -111,7 +111,7 @@ gem 'elastic-apm', require: false
 gem 'newrelic_rpm', require: false
 gem 'newrelic-sidekiq-metrics', '>= 1.6.2', require: false
 gem 'scout_apm', require: false
-gem 'sentry-rails', '>= 5.19.0', require: false
+gem 'sentry-rails', '>= 5.20.0', require: false
 gem 'sentry-ruby', require: false
 gem 'sentry-sidekiq', '>= 5.19.0', require: false
 
@@ -182,7 +182,7 @@ group :production do
   # we dont want request timing out in development while using byebug
   gem 'rack-timeout'
   # for heroku autoscaling
-  gem 'judoscale-rails', require: false
+  gem 'judoscale-rails', '>= 1.8.3', require: false
   gem 'judoscale-sidekiq', require: false
 end
 
@@ -203,7 +203,7 @@ group :development do
   gem 'rack-mini-profiler', '>= 3.2.0', require: false
   gem 'stackprof'
   # Should install the associated chrome extension to view query logs
-  gem 'meta_request', '>= 0.8.3'
+  gem 'meta_request', '>= 0.8.4'
 end
 
 group :test do
@@ -224,12 +224,12 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'climate_control'
   gem 'debug', '~> 1.8'
-  gem 'factory_bot_rails', '>= 6.4.3'
+  gem 'factory_bot_rails', '>= 6.4.4'
   gem 'listen'
   gem 'mock_redis'
   gem 'pry-rails'
   gem 'rspec_junit_formatter'
-  gem 'rspec-rails', '>= 6.1.5'
+  gem 'rspec-rails', '>= 7.0.2'
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
