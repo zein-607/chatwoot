@@ -92,7 +92,7 @@ gem 'twilio-ruby', '~> 5.66'
 # gem 'twitty', git: 'https://github.com/chatwoot/twitty'
 gem 'twitty', '~> 0.1.5'
 # facebook client
-gem 'koala'
+gem 'koala', '>= 3.5.0'
 # slack client
 gem 'slack-ruby-client', '~> 2.5.2'
 # for dialogflow integrations
@@ -210,7 +210,7 @@ group :test do
   # fast cleaning of database
   gem 'database_cleaner'
   # mock http calls
-  gem 'webmock'
+  gem 'webmock', '>= 3.24.0'
   # test profiling
   gem 'test-prof'
 end
@@ -230,10 +230,10 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec_junit_formatter'
   gem 'rspec-rails', '>= 6.1.5'
-  gem 'rubocop', require: false
-  gem 'rubocop-performance', require: false
-  gem 'rubocop-rails', require: false
-  gem 'rubocop-rspec', require: false
+  gem 'rubocop', '>= 1.51.0', require: false
+  gem 'rubocop-performance', '>= 1.18.0', require: false
+  gem 'rubocop-rails', '>= 2.20.0', require: false
+  gem 'rubocop-rspec', '>= 2.22.0', require: false
   gem 'seed_dump'
   gem 'shoulda-matchers'
   gem 'simplecov', '0.17.1', require: false
